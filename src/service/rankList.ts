@@ -45,7 +45,7 @@ export const getSongDetail = async (params:getSongParams) => {
 
 // 获取mv排行
 export const getMVList = async (params:getmvParams) => {
-  const [err, res] = await to(http.get<Res.getmvData>("/top/mv",{params}));
+  const [err, res] = await to(http.get("/top/mv",{params}));
   if (err) throw new Error("请求失败");
   return res.data;
 };

@@ -95,6 +95,10 @@ interface Track {
   first: string;
   second: string;
 }
+interface Artist {
+  id: number;
+  name: string;
+}
 namespace Res {
   interface getDefaultKey {
     code: number;
@@ -125,6 +129,7 @@ namespace Res {
   }
 
   interface rankListResult {
+    list?: any[];
     subscribers: any[];
     subscribed?: any;
     creator?: any;
@@ -187,10 +192,7 @@ namespace Res {
     ratio: number;
   }
 
-   interface Artist {
-    id: number;
-    name: string;
-  }
+
 
    interface getmvData {
     id: number;

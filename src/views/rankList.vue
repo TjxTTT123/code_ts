@@ -134,19 +134,19 @@
 import { getTopList, getTrackId, getSongDetail, getMVList } from "@/service";
 import { useRequest } from "vue-request";
 const { data: topList } = useRequest(getTopList, {});
-const { data: playList, run: runGetTrackId } = useRequest(getTrackId, {
-  manual: true,
-});
-const { data: songDetail, run: runGetsongDetail } = useRequest(getSongDetail, {
-  manual: true,
-});
+// const { data: playList, run: runGetTrackId } = useRequest(getTrackId, {
+//   manual: true,
+// });
+// const { data: songDetail, run: runGetsongDetail } = useRequest(getSongDetail, {
+//   manual: true,
+// });
 const { data: mvList, run: runmvList } = useRequest(getMVList, {
   manual: true,
 });
 
 const rewardRankList = ref([]);
 const publicRankList = ref([]);
-const songsFirstPic = ref([]);
+// const songsFirstPic = ref([]);
 const selectRankList = ref([]);
 const mvPic = ref("");
 const active = ref(0);
@@ -164,11 +164,11 @@ watchEffect(() => {
   //   songsFirstPic.value.push(songDetail.value?.songs[i]?.al?.picUrl);
   // }
   mvPic.value = mvList.value?.data[0]?.cover;
-  console.log(mvList.value);
+  // console.log(mvList.value);
 });
 </script>
 <style lang="css">
-::v-deep .van-tabs__wrap {
+.van-tabs__wrap {
   font-size: 4vw;
 }
 </style>
